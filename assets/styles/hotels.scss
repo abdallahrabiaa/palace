@@ -1,0 +1,114 @@
+.gallery{
+display:flex;
+align-items: flex-start;
+}
+.photos{
+  width:100%;
+display :inline-block;
+
+}
+.main{
+  padding:0;
+ // background-color:$yellow;
+}
+.overview{
+ // border-left: 1px solid $yellown2;
+  margin-top:-0.6rem;
+  background-color:$greyE;
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width:635px){
+padding:0;
+  }
+
+  &_stars{
+
+    margin-right:auto;
+
+  }
+  &_location{
+    fill:$Blue;
+   }
+
+&_rating{
+background-color: $Blue;
+  font-weight:300;
+  flex-grow: 1;
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:$yellow;
+  @media only screen and (max-width:635px){
+    margin-left:-.5rem;
+  }
+  @media only screen and (max-width:400px){
+    margin-left:-2.5rem;
+
+  }
+}
+  &_count{
+font-size:.9rem;
+  }
+  &_average{
+font-size:3rem;
+
+  }
+  &_heading{
+    font-size:2rem;
+    font-weight:400;
+    text-transform:uppercase;
+    color:$Blue;
+    letter-spacing: 3px;
+    padding:1.5rem 3rem ;
+    @media only screen and (max-width:635px){
+      padding:0;
+      font-size:.9rem;
+    }
+
+  }
+}
+.star{
+fill:$yellow;
+}
+.locationButton{
+  display: inline;
+  border:none;
+  color:$Blue;
+  background-color: transparent;
+  font-size:inherit;
+  font-family:inherit;
+  border-bottom:1px dashed currentColor;
+  cursor:pointer;
+  transition: all 200ms;
+  backface-visibility:hidden;
+  @media only screen and (max-width:635px){
+    padding:0;
+    font-size:.9rem;
+    margin-right:3rem;
+  }
+  &:active , &:hover{
+    outline:none;
+    color:$white;
+  }
+  &:focus{
+   animation: pull 1s infinite;
+    outline:none;
+
+  }
+}
+.con-location{
+
+    display: flex;
+  justify-content:center;
+  padding:1rem;
+    align-items:center;
+    margin-right:1rem;
+    font-size:1.5rem;
+  @media only screen and (max-width:635px){
+    margin:0;
+  }
+
+}

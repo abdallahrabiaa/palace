@@ -1,0 +1,65 @@
+.booking{
+  padding:3.5rem 0;
+  text-align:center;
+color:$Blue;
+}
+.h2Booking{
+  font-size:1.3rem;
+  text-transform:uppercase;
+  margin-bottom:3rem ;
+
+}
+.btnBook {
+  font-size: 1.4rem;
+  font-family: inherit;
+  position: relative;
+  color: $white;
+  overflow: hidden;
+  border: none;
+  border-radius: 5rem;
+  width:15rem;
+  height:6rem;
+transition:all 300ms;
+  background-color: $Blue;
+  display:inline-block;
+  cursor:pointer;
+  &:focus {
+    outline: none;
+
+  }
+&:active{
+  transform:translateY(1rem);
+}
+  &:hover {
+    .btnInvisible {
+      left: 0;
+      top: 40%;
+
+    }
+
+    .btnVisible {
+    transform:translateY(100%);
+
+    }
+
+  }
+}
+.btnInvisible{
+  display:inline-block;
+  position:absolute;
+  left:0;
+  top:-100%;
+  height:100%;
+  width:100%;
+  transition:all 300ms;
+
+}
+.btnVisible{
+display: block;
+  transition:all 300ms;
+text-align: center;
+  height:100%;
+  width:100%;
+  transform:translateY(40%);
+
+}

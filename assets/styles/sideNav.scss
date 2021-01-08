@@ -1,0 +1,109 @@
+.ulist{
+  list-style: none;
+  @media only screen and (max-width:1200px){
+display:flex;
+    flex-direction: row;
+    font-size:12px;
+margin:0;
+padding:0;
+  }
+}
+.sideNav{
+flex:1 0 18%;
+  font-size:1.4rem;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  background-color:$Blue;
+
+}
+.svgIcon{
+  width:2.75rem;
+  height:2.75rem;
+  fill:currentColor;
+}
+.navLink{
+  display: flex;
+  align-items:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  position :relative;
+  @media only screen and (max-width :600px){
+flex-direction:column;
+    padding:0;
+    margin:0;
+
+  }
+  width:100%;
+  z-index:10;
+  color:$white;
+    padding :1rem ;
+ &:active{
+   color:white;
+ }
+
+}
+.design{
+   p a {
+    text-decoration: none;
+  }
+  font-size: 1rem;
+  text-align:center;
+  color:$white;
+  text-wrap: normal;
+  text-shadow:0 1rem 2rem $black2;
+  @media only screen and (max-width:1200px) {
+    display: none;
+  }
+}
+.nav-item{
+  position:relative;
+  width:100%;
+  margin-top:3rem;
+  margin-left:0;
+  @media only screen and (max-width:1200px){
+    margin:0;
+    padding:0;
+
+  }
+  &:hover::before{
+
+      transform: scaleY(1);
+      width: 100%;
+
+
+
+  }
+  &:not(:last-child){
+    margin-bottom :1rem;
+  }
+  &::before{
+
+    transition: transform 200ms, width .4s cubic-bezier(1,0,0,1) 0.2s , background-color .1s;
+    transform-origin: center;
+    content: "";
+    background-color: $greyE;
+    position: absolute;
+    width: 4px;
+    transform: scaleY(0);
+    top: 0;
+    right: 0;
+    height: 100%;
+    :active{
+      background-color: $redNav;
+    }
+
+  }
+}
+.nav-item:hover{
+  .navLink {
+    transition-delay:  .4s;
+
+    color:$Blue;
+    .svgIcon {
+     // fill: white;
+    }
+  }
+}
+

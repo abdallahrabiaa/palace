@@ -1,0 +1,42 @@
+.mainContainer{
+ max-width:100rem;
+  background-color: $greyE;
+  margin:8rem auto;
+  box-shadow:0 2rem 6rem rgba(0,0,0,.3);
+@media only screen and (max-width:1200px){
+  margin:0;
+
+}
+}
+.content{
+  display:flex;
+  @media only screen and (max-width:1200px){
+    margin:0;
+    flex-direction: column;
+
+  }
+}
+.header{
+ height:5rem;
+  width:100%;
+  background-color:$white;
+
+}
+
+
+
+.inlineSvg{
+  background-image:url(../SVGs/searchsolid.svg);
+  background-repeat:no-repeat;
+  width:1rem;
+  height:1rem;
+  display:inline-block;
+fill:$white;
+}
+body {
+  @media only srceen and (max-width: 1100px) {
+   min-width: auto;
+    margin-outside: 0;
+    display: block;
+  }
+}

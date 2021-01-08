@@ -1,0 +1,214 @@
+.details{
+display:flex;
+  padding:3.6rem;
+  @media only screen and (max-width:1200px){
+   flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+  }
+
+  background-color:$white;
+  //font-size:1.4rem;
+}
+.description{
+flex:0 0 56%;
+  background-color:$white;
+  color:$Blue;
+  margin-right:4.6rem;
+  box-shadow:$shadowDark;
+font-size:1rem;
+padding:3rem;
+  height:100%;
+  @media only screen and (max-width:600px){
+   margin:0;
+
+  }
+  border-radius:.7rem;
+  @media only screen and (max-width:320px){
+   padding:2rem;
+  }
+}
+
+.paragraph:not(:last-of-type){
+margin-bottom:3.5rem;
+}
+.list{
+  margin:3rem ;
+  list-style:none;
+  padding:3rem 0 ;
+  border-top:$Blue 1px dashed;
+  border-bottom:$Blue 1px dashed ;
+  display:flex;
+justify-content: space-between;
+  flex-wrap:wrap;
+}
+.listItem {
+  flex: 0 0 50%;
+  @media only screen and (max-width:600px){
+    margin-bottom:1.3rem;
+    flex: 0 0 100%;
+
+  }
+font-size:1.4rem;
+  transition:all 200ms;
+  margin-bottom: 0.7rem;
+  &:hover{
+    transform:translateX(1rem);
+    cursor:pointer;
+  }
+  @media only screen and (max-width:1200px){
+  }
+
+}
+.listItem::before{
+  content:"";
+  height:1rem;
+   width:1rem;
+  display:inline-block;
+  margin-right:.7rem;
+  background-size: 100% 100%;
+
+  background-image:url(../SVGs/right.svg);
+ // background-color:$Blue;
+
+
+  //-webkit-mask-image:url(../SVGs/right.svg);
+  background-repeat:no-repeat;
+ // mask-size:cover;
+ // -webkit-mask-size:cover;
+  vertical-align:middle;
+}
+.recommendedPhotos{
+  box-sizing:content-box;
+  border: 2px solid white;
+  height:4rem;
+  width:4rem;
+  border-radius:50%;
+  @media only screen and (max-width:600px){
+    height:30%;
+    width:30%;
+  }
+  &:not(:last-child){
+    margin-right:-1rem;
+  }
+}
+.recommended{
+  display:flex;
+align-items:center;
+  justify-content:space-between;
+
+}
+.reviews{
+ // background-color:$greyE;
+ // box-shadow:$shadowDark;
+padding:1rem;
+  display:flex;
+  align-items:center;
+justify-content:space-evenly;
+  flex-direction:column;
+
+}
+.userquote{
+  height:3.5rem;
+  width:3.5rem;
+  border-radius:50%;
+}
+.userReview{
+  position:relative;
+  background-color:$white;
+  width:100%;
+  height:50%;
+  border-radius:.7rem;
+  margin:0.5rem;
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+align-items:center;
+  box-shadow:$shadowDark;
+  color:$Blue;
+  overflow:hidden;
+
+
+
+}
+.figUser{
+  display:flex;
+ justify-content:space-between;
+  align-items:center;
+}
+.reviewText{
+  margin:1rem;
+  position: relative;
+  z-index:3;
+
+}
+.userBox{
+  margin-right: auto;
+}
+.figrating{
+  font-size:2rem;
+  display:block;
+  margin-left:2rem;
+  color:$yellow;
+}
+.figpra_name{
+  font-size:1.2rem;
+  font-weight:600;
+  text-transform:uppercase;
+  margin-bottom:.3rem;
+  color:$Blue;
+}
+.figpra_date{
+  font-size:1rem;
+  font-weight:300;
+}
+.userReview::before{
+  content:"\201C";
+  position:absolute;
+  top:-2rem;
+  left:-1rem;
+  font-size:20rem;
+  color:$greyE;
+  line-height:1;
+  font-family:sans-serif;
+  z-index:1;
+}
+.btnInline{
+  border:none;
+  font-family:inherit;
+  display:block;
+  font-size:1.4rem;
+  background-color: transparent;
+  cursor:pointer;
+  color:$Blue;
+  &:focus {
+    outline:none;
+    animation: pull 1s infinite;
+    .btnText{
+
+      margin-left:1rem;
+
+    }
+  }
+  :active{
+    animation: pull 1s infinite;
+    .btnText{
+
+      margin-left:1rem;
+
+    }
+
+  }
+
+
+}
+.btnText{
+  transition: margin-left 400ms;
+
+}
+.btnInline:hover  .btnText{
+
+margin-left:1rem;
+
+}
